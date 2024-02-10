@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbn6p6mdf2oih"]
+
+[ext_resource type="Texture2D" uid="uid://caf7ujx07xk4" path="res://assets/pipes/pipe.png" id="1_nwh8q"]
+[ext_resource type="Script" path="res://test.gd" id="1_s54a7"]
+
+[node name="Test" type="Node2D"]
+script = ExtResource("1_s54a7")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Pipe" type="Sprite2D" parent="."]
+position = Vector2(270, 432)
+texture = ExtResource("1_nwh8q")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Pipe2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(554, 426)
+texture = ExtResource("1_nwh8q")
